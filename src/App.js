@@ -35,7 +35,7 @@ class App extends Component {
       this.setState({user:userInfo})
     });
 
-    firebase.database().ref('pictures').on('child_added', snapshot=>{
+    firebase.database().ref('photo').on('child_added', snapshot=>{
       this.setState({
         pictures:this.state.pictures.concat(snapshot.val())
       })
@@ -88,7 +88,7 @@ class App extends Component {
 
   handleUpload(event){
     const file=event.target.files[0];
-    const storageRef=firebase.storage().ref(`photos/${file.name}`);
+    const storageRef=firebase.storage().ref(`photos/photo-${Math.random()}-${file.name}`);
     const task=storageRef.put(file);
 
    task.on('state_changed', (snapshot) => {
@@ -105,7 +105,7 @@ class App extends Component {
         photoURL:task.snapshot.downloadURL
       }
 
-      const dbRef=firebase.database().ref('pictures');
+      const dbRef=firebase.database().ref('photo');
       const newPicture=dbRef.push();
       newPicture.set(record);
 

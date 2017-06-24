@@ -6,12 +6,12 @@ import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 
 firebase.initializeApp({
-    apiKey: "AIzaSyDl9CCjfQhHq8tsyNtXtbBpd8jwtwQjArg",
-    authDomain: "pseuddogram.firebaseapp.com",
-    databaseURL: "https://pseuddogram.firebaseio.com",
-    projectId: "pseuddogram",
-    storageBucket: "pseuddogram.appspot.com",
-    messagingSenderId: "379196110907"
+    apiKey: "AIzaSyC5Ywepz-pGw0UZg4oLOQLaE2rYPf-liWQ",
+    authDomain: "family-photo-reactjs.firebaseapp.com",
+    databaseURL: "https://family-photo-reactjs.firebaseio.com",
+    projectId: "family-photo-reactjs",
+    storageBucket: "family-photo-reactjs.appspot.com",
+    messagingSenderId: "21088527912"
 })
 
 ReactDOM.render(
